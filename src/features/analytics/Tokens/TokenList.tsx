@@ -1,6 +1,5 @@
 import ColoredNumber from '../ColoredNumber'
 import CurrencyLogo from '../../../components/CurrencyLogo'
-import LineGraph from '../../../components/LineGraph'
 import React from 'react'
 import Table, { Column } from '../../../components/Table'
 import _ from 'lodash'
@@ -116,9 +115,7 @@ const TokenListColumns: Record<TokenListColumnType, Column> = {
     accessor: 'graph',
     Cell: (props) => (
       <div className="flex justify-end w-full h-full py-2 pr-2">
-        <div className="w-32 h-10">
-          <LineGraph data={props.value} stroke={{ solid: props.row.original.change1w >= 0 ? '#00ff4f' : '#ff3838' }} />
-        </div>
+        <div className="w-32 h-10"></div>
       </div>
     ),
     disableSortBy: true,

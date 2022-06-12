@@ -1,6 +1,5 @@
 import { useBlock, useDayData, useNativePrice, useTokens } from '../../../../services/graph'
 import { useMemo, useState } from 'react'
-import ChartCard from '../../ChartCard'
 import { useActiveWeb3React } from '../../../../services/web3'
 
 interface DashboardChartCardProps {
@@ -72,16 +71,5 @@ export default function TokenChartCard(props: DashboardChartCardProps): JSX.Elem
     [type, token, token1d, token2d, dayData, nativePrice, nativePrice1d]
   )
 
-  return (
-    <ChartCard
-      header={type.header}
-      subheader={props.name}
-      figure={data.figure}
-      change={data.change}
-      chart={data.chart}
-      currentTimespan={chartTimespan}
-      timespans={chartTimespans}
-      setTimespan={setChartTimespan}
-    />
-  )
+  return <></>
 }

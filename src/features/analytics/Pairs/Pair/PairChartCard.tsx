@@ -1,6 +1,5 @@
 import { useBlock, useDayData, usePhoPairs } from '../../../../services/graph'
 import { useMemo, useState } from 'react'
-import ChartCard from '../../ChartCard'
 import { useActiveWeb3React } from '../../../../services/web3'
 
 interface PairChartCardProps {
@@ -60,16 +59,5 @@ export default function PairChartCard(props: PairChartCardProps): JSX.Element {
 
   const data = useMemo(() => type.getData(pair, pair1d, pair2d, dayData), [pair, pair1d, pair2d, dayData])
 
-  return (
-    <ChartCard
-      header={type.header}
-      subheader={props.name}
-      figure={data.figure}
-      change={data.change}
-      chart={data.chart}
-      currentTimespan={chartTimespan}
-      timespans={chartTimespans}
-      setTimespan={setChartTimespan}
-    />
-  )
+  return <></>
 }
