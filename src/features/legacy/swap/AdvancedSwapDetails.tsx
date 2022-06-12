@@ -36,7 +36,9 @@ export function AdvancedSwapDetails({ trade, allowedSlippage }: AdvancedSwapDeta
       <div className="flex flex-row items-center justify-between">
         <span className="flex items-center">
           <div className="text-sm text-secondary">{i18n._(t`Route`)}</div>
-          <QuestionHelper text={i18n._(t`Routing through these tokens resulted in the best price for your trade.`)} />
+          <QuestionHelper
+            text={i18n._(t`Routing through these tokens resulted in the best price for your trade.`)}
+          ><div></div></QuestionHelper>
         </span>
         <SwapRoute trade={trade} />
       </div>
@@ -50,7 +52,7 @@ export function AdvancedSwapDetails({ trade, allowedSlippage }: AdvancedSwapDeta
             text={i18n._(
               t`Your transaction will revert if there is a large, unfavorable price movement before it is confirmed.`
             )}
-          />
+          ><div></div></QuestionHelper>
         </RowFixed>
         <RowFixed>
           <div className="text-sm font-bold text-high-emphesis">
@@ -65,7 +67,7 @@ export function AdvancedSwapDetails({ trade, allowedSlippage }: AdvancedSwapDeta
           <div className="text-sm text-secondary">{i18n._(t`Price Impact`)}</div>
           <QuestionHelper
             text={i18n._(t`The difference between the market price and estimated price due to trade size.`)}
-          />
+          ><div></div></QuestionHelper>
         </RowFixed>
         <FormattedPriceImpact priceImpact={priceImpact} />
       </RowBetween>
@@ -75,7 +77,7 @@ export function AdvancedSwapDetails({ trade, allowedSlippage }: AdvancedSwapDeta
           <div className="text-sm text-secondary">{i18n._(t`Liquidity Provider Fee`)}</div>
           <QuestionHelper
             text={i18n._(t`A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive.`)}
-          />
+          ><div></div></QuestionHelper>
         </RowFixed>
         <div className="text-sm font-bold text-high-emphesis">
           {realizedLPFee
@@ -87,7 +89,7 @@ export function AdvancedSwapDetails({ trade, allowedSlippage }: AdvancedSwapDeta
       <RowBetween>
         <RowFixed>
           <div className="text-sm text-secondary">{i18n._(t`Slippage tolerance`)}</div>
-          <QuestionHelper text={i18n._(t`Slippage tolerance...`)} />
+          <QuestionHelper text={i18n._(t`Slippage tolerance...`)} ><div></div></QuestionHelper>
         </RowFixed>
         <div className="text-sm font-bold text-high-emphesis">{allowedSlippage.toFixed(2)}%</div>
       </RowBetween>

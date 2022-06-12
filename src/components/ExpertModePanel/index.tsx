@@ -6,6 +6,7 @@ import { XCircleIcon } from '@heroicons/react/outline'
 interface ExpertModePanelProps {
   active: boolean
   onClose: () => void
+  children: any
 }
 
 const ExpertModePanel: FC<ExpertModePanelProps> = ({ active, children, onClose }) => {

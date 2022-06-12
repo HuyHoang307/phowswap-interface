@@ -98,7 +98,7 @@ export default function TransactionSettings({ placeholderSlippage }: Transaction
             text={i18n._(
               t`Your transaction will revert 23if the price changes unfavorably by more than this percentage.`
             )}
-          />
+          > </QuestionHelper>
         </div>
         <div className="flex items-center space-x-2">
           <div
@@ -176,7 +176,9 @@ export default function TransactionSettings({ placeholderSlippage }: Transaction
             {i18n._(t`Transaction deadline`)}
           </Typography>
 
-          <QuestionHelper text={i18n._(t`Your transaction will revert if it is pending for more than this long.`)} />
+          <QuestionHelper
+            text={i18n._(t`Your transaction will revert if it is pending for more than this long.`)}
+          ><></></QuestionHelper>
         </div>
         <div className="flex items-center">
           <div

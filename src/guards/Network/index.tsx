@@ -13,6 +13,7 @@ import { useActiveWeb3React } from '../../services/web3'
 
 interface NetworkGuardProps {
   networks: ChainId[]
+  children: any
 }
 
 const Component: FC<NetworkGuardProps> = ({ children, networks = [] }) => {

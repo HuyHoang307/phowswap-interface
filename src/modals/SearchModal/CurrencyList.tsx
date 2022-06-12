@@ -166,7 +166,7 @@ function BreakLineComponent({ style }: { style: CSSProperties }) {
         <QuestionHelper
           text={i18n._(t`Tokens from inactive lists. Import specific tokens below or
             click Manage to activate more lists.`)}
-        />
+        ><div></div></QuestionHelper>
       </RowBetween>
     </FixedContentRow>
   )

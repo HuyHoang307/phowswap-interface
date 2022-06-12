@@ -62,7 +62,7 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
                 </Typography>
                 <QuestionHelper
                   text={i18n._(t`Bypasses confirmation modals and allows high slippage trades. Use at your own risk.`)}
-                />
+                > </QuestionHelper>
               </div>
               <Toggle
                 id="toggle-expert-mode-button"
@@ -85,7 +85,7 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
                 <Typography variant="sm" className="text-primary">
                   {i18n._(t`Disable Multihops`)}
                 </Typography>
-                <QuestionHelper text={i18n._(t`Restricts swaps to direct pairs only.`)} />
+                <QuestionHelper text={i18n._(t`Restricts swaps to direct pairs only.`)} > </QuestionHelper>
               </div>
               <Toggle
                 id="toggle-disable-multihop-button"

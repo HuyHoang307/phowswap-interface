@@ -1,7 +1,7 @@
 import { classNames } from '../../functions'
 
 interface ItemProps {
-  item: unknown
+  item: any
   className?: string
 }
 
@@ -12,7 +12,7 @@ export function Item({ item, className }: ItemProps) {
 }
 
 interface ListProps {
-  items: unknown[]
+  items: any[]
   className?: string
 }
 

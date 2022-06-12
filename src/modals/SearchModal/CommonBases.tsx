@@ -25,7 +25,7 @@ export default function CommonBases({
     <div className="flex flex-col space-y-2">
       <div className="flex flex-row">
         Common bases
-        <QuestionHelper text="These tokens are commonly paired with other tokens." />
+        <QuestionHelper text="These tokens are commonly paired with other tokens." ><div></div></QuestionHelper>
       </div>
       <div className="flex flex-wrap">
         {bases.map((currency: Currency) => {

@@ -2,7 +2,7 @@ import { isMobile } from 'react-device-detect'
 import { FC } from 'react'
 import { classNames } from '../../functions'
 
-const DoubleGlowShadow: FC<{ className?: string }> = ({ children, className }) => {
+const DoubleGlowShadow: FC<{ className?: string; children: any }> = ({ children, className }) => {
   if (isMobile) {
     return <div className="shadow-swap">{children}</div>
   }

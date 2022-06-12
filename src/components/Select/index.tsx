@@ -35,6 +35,7 @@ const NeonSelect: FC<NeonSelectProps> = ({ value, children }) => {
 interface NeonSelectItemProps {
   onClick: (e: MouseEvent<HTMLDivElement>, idx: number | string) => void
   value: number | string
+  children: any
 }
 
 export const NeonSelectItem: FC<NeonSelectItemProps> = ({ onClick, value, children }) => {

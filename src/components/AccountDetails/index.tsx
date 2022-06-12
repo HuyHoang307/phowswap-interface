@@ -18,7 +18,7 @@ import { useActiveWeb3React } from '../../services/web3'
 import { useDispatch } from 'react-redux'
 import { useLingui } from '@lingui/react'
 
-const WalletIcon: FC<{ size?: number; src: string; alt: string }> = ({ size, src, alt, children }) => {
+const WalletIcon: FC<{ size?: number; src: string; alt: string; children: any }> = ({ size, src, alt, children }) => {
   return (
     <div className="flex flex-row items-end justify-center mr-2 flex-nowrap md:items-center">
       <Image src={src} alt={alt} width={size} height={size} />
@@ -73,11 +73,23 @@ const AccountDetails: FC<AccountDetailsProps> = ({
       return null
       // return <IconWrapper size={16}>{/* <Identicon /> */}</IconWrapper>
     } else if (connector.constructor.name === 'WalletConnectConnector') {
-      return <WalletIcon src="/wallet-connect.png" alt="Wallet Connect" size={16} />
+      return (
+        <WalletIcon src="/wallet-connect.png" alt="Wallet Connect" size={16}>
+          {' '}
+        </WalletIcon>
+      )
     } else if (connector.constructor.name === 'WalletLinkConnector') {
-      return <WalletIcon src="/coinbase.svg" alt="Coinbase" size={16} />
+      return (
+        <WalletIcon src="/coinbase.svg" alt="Coinbase" size={16}>
+          {' '}
+        </WalletIcon>
+      )
     } else if (connector.constructor.name === 'FortmaticConnector') {
-      return <WalletIcon src="/formatic.png" alt="Fortmatic" size={16} />
+      return (
+        <WalletIcon src="/formatic.png" alt="Fortmatic" size={16}>
+          {' '}
+        </WalletIcon>
+      )
     } else if (connector.constructor.name === 'PortisConnector') {
       return (
         <WalletIcon src="/portnis.png" alt="Portis" size={16}>
@@ -92,7 +104,11 @@ const AccountDetails: FC<AccountDetailsProps> = ({
         </WalletIcon>
       )
     } else if (connector.constructor.name === 'TorusConnector') {
-      return <WalletIcon src="/torus.png" alt="Torus" size={16} />
+      return (
+        <WalletIcon src="/torus.png" alt="Torus" size={16}>
+          {' '}
+        </WalletIcon>
+      )
     }
     return null
   }
