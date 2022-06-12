@@ -1,10 +1,7 @@
 {
-  "name": "sushiswap-interface",
+  "name": "phoswap-interface",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": "14.17.3"
-  },
   "scripts": {
     "analyze": "ANALYZE=true yarn build && serve .next -n",
     "start:prod": "next start -p $PORT",
