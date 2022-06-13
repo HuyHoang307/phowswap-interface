@@ -72,52 +72,6 @@ function AppBar(): JSX.Element {
 
                 <div className="fixed bottom-0 left-0 z-10 flex flex-row items-center justify-center w-full p-4 lg:w-auto bg-dark-1000 lg:relative lg:p-0 lg:bg-transparent">
                   <div className="flex items-center justify-between w-full space-x-2 sm:justify-end">
-                    {chainId && [ChainId.MAINNET].includes(chainId) && library && library.provider.isMetaMask && (
-                      <>
-                        <QuestionHelper text={i18n._(t`Add xPHO to your MetaMask wallet`)}>
-                          <div
-                            className="hidden p-0.5 rounded-md cursor-pointer sm:inline-flex bg-dark-900 hover:bg-dark-800"
-                            onClick={() => {
-                              if (library && library.provider.isMetaMask && library.provider.request) {
-                                const params: any = {
-                                  type: 'ERC20',
-                                  options: {
-                                    address: '0x8798249c2e607446efb7ad49ec89dd1865ff4272',
-                                    symbol: 'XPHO',
-                                    decimals: 18,
-                                    image:
-                                      'https://raw.githubusercontent.com/Pho-Swap/pho-swap-interface/master/public/android-chrome-128x128.png',
-                                  },
-                                }
-                                library.provider
-                                  .request({
-                                    method: 'wallet_watchAsset',
-                                    params,
-                                  })
-                                  .then((success) => {
-                                    if (success) {
-                                      console.log('Successfully added XPHO to MetaMask')
-                                    } else {
-                                      throw new Error('Something went wrong.')
-                                    }
-                                  })
-                                  .catch(console.error)
-                              }
-                            }}
-                          >
-                            <Image
-                              src="/images/tokens/xsushi-square.jpg"
-                              alt="xPHO"
-                              width="38px"
-                              height="38px"
-                              objectFit="contain"
-                              className="rounded-md"
-                            />
-                          </div>
-                        </QuestionHelper>
-                      </>
-                    )}
-
                     {chainId && chainId in PHO_ADDRESS && library && library.provider.isMetaMask && (
                       <>
                         <QuestionHelper text={i18n._(t`Add PHO to your MetaMask wallet`)}>

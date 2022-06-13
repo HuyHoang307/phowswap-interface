@@ -348,7 +348,7 @@ export default function WithDrawModal({
               firstValue === undefined ||
               new BigNumber(firstValue).gt(new BigNumber(userStake))
             }
-            className={`bg-gradient-to-r from-blue to-pink btn-primary1 ${
+            className={`bg-gradient-to-r from-red to-yellow btn-primary1 ${
               firstValue === '' ||
               firstValue === null ||
               firstValue === undefined ||

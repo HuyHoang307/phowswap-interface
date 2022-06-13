@@ -1,6 +1,6 @@
 import React from 'react'
 
-export type BadgeColor = 'default' | 'blue' | 'pink' | 'gradient'
+export type BadgeColor = 'default' | 'yellow' | 'pink' | 'gradient'
 export type BadgeSize = 'default' | 'medium' | 'large'
 
 export interface BadgeProps {
@@ -11,10 +11,10 @@ export interface BadgeProps {
 
 export const COLOR = {
   default: '',
-  blue: 'bg-blue bg-opacity-20 outline-blue rounded text-xs text-blue px-2 py-1',
-  pink: 'bg-pink bg-opacity-20 outline-pink rounded text-xs text-pink px-2 py-1',
+  red: 'bg-red bg-opacity-20 outline-red rounded text-xs text-red px-2 py-1',
+  yellow: 'bg-yellow bg-opacity-20 outline-yellow rounded text-xs text-yellow px-2 py-1',
   gradient:
-    'bg-gradient-to-r from-blue to-pink opacity-80 hover:opacity-100 bg-pink bg-opacity-20 outline-pink rounded text-base text-white px-2 py-1',
+    'bg-gradient-to-r from-red to-yellow opacity-80 hover:opacity-100 bg-red bg-opacity-20 outline-red rounded text-base text-white px-2 py-1',
 }
 
 export const SIZE = {
