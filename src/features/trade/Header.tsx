@@ -38,7 +38,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
     <div className="flex items-center justify-between mb-4 space-x-3">
       <div className="grid grid-cols-2 rounded p-3px bg-dark-800 h-[46px]">
         <NavLink
-          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-red to-yellow hover:from-red hover:to-yellow"
+          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-pink to-yellow hover:from-red hover:to-yellow"
           href={{
             pathname: '/swap',
             query: getQuery(input, output),
@@ -49,7 +49,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
           </a>
         </NavLink>
         <NavLink
-          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-red to-yellow hover:from-red hover:to-yellow"
+          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-pink to-yellow hover:from-red hover:to-yellow"
           href={`/${!isRemove ? 'add' : 'remove'}${input ? `/${currencyId(input)}` : ''}${
             output ? `/${currencyId(output)}` : ''
           }`}

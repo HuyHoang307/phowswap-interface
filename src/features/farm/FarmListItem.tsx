@@ -787,7 +787,7 @@ const FarmListItem = ({ farm, farmLength }) => {
                     <div className="flex flex-row items-center btn-container">
                       <button
                         disabled={!farm.active}
-                        className={`bg-gradient-to-r from-red to-yellow btn-primary1 ${!farm.active && 'disable-btn'}`}
+                        className={`bg-gradient-to-r from-pink to-yellow btn-primary1 ${!farm.active && 'disable-btn'}`}
                         onClick={handleOpenDeposit}
                       >
                         <div className="label">{i18n._(t`Deposit`)}</div>
@@ -815,7 +815,7 @@ const FarmListItem = ({ farm, farmLength }) => {
                         />
                       )}
                       <button
-                        className={`bg-gradient-to-r from-red to-yellow btn-primary1 ${
+                        className={`bg-gradient-to-r from-pink to-yellow btn-primary1 ${
                           ((data.phoTokenReward === 0 && data.token0Reward === 0 && data.token1Reward === 0) ||
                             (!farm.isActive && data.checkClaim)) &&
                           'disable-btn'
@@ -848,7 +848,7 @@ const FarmListItem = ({ farm, farmLength }) => {
                     </div>
                     <div className="flex flex-row items-center btn-container mb-36">
                       <button
-                        className={`bg-gradient-to-r from-red to-yello btn-primary1 ${
+                        className={`bg-gradient-to-r from-pink to-yello btn-primary1 ${
                           (data.userStake === 0 || (!farm.active && !data.checkClaim)) && 'disable-btn'
                         } `}
                         disabled={(!farm.active && !data.checkClaim) || data.userStake === 0}

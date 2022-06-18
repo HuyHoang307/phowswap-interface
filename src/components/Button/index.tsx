@@ -18,7 +18,7 @@ const FILLED = {
   green: 'bg-green bg-opacity-80 w-full rounded text-high-emphesis hover:bg-opacity-100 disabled:bg-opacity-80',
   yellow: 'bg-yellow bg-opacity-80 w-full rounded text-high-emphesis hover:bg-opacity-100 disabled:bg-opacity-80',
   gradient:
-    'w-full text-high-emphesis bg-gradient-to-r from-red to-yellow opacity-80 hover:opacity-100 disabled:bg-opacity-80',
+    'w-full text-high-emphesis bg-gradient-to-r from-pink to-yellow opacity-80 hover:opacity-100 disabled:bg-opacity-80',
 }
 
 const OUTLINED = {
@@ -30,7 +30,7 @@ const OUTLINED = {
   green: 'bg-green bg-opacity-20 border border-green rounded text-green hover:bg-opacity-40 disabled:bg-opacity-20',
   yellow: 'bg-yellow bg-opacity-20 outline-yellow rounded text-yellow hover:bg-opacity-40 disabled:bg-opacity-20',
   gradient:
-    'border border-transparent border-gradient-r-red-yellow-dark-900 opacity-80 hover:opacity-100 disabled:bg-opacity-20',
+    'border border-transparent border-gradient-r-pink-yellow-dark-900 opacity-80 hover:opacity-100 disabled:bg-opacity-20',
 }
 
 const EMPTY = {
