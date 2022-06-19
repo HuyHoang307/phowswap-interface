@@ -52,6 +52,7 @@ import {
   WOOFY,
   XDAI,
   YFI,
+  RINKEBY,
 } from './tokens'
 
 import * as MOONRIVER from './moonriver'
@@ -112,7 +113,7 @@ const WRAPPED_NATIVE_ONLY: ChainTokenList = {
   [ChainId.CELO]: [WNATIVE[ChainId.CELO]],
   [ChainId.MOONRIVER]: [WNATIVE[ChainId.MOONRIVER]],
   [ChainId.PALM]: [WNATIVE[ChainId.PALM]],
-  [ChainId.FUSE]: [WNATIVE[ChainId.FUSE]]
+  [ChainId.FUSE]: [WNATIVE[ChainId.FUSE]],
 }
 
 // used to construct intermediary pairs for trading
@@ -130,6 +131,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     OHM,
     PHO[ChainId.MAINNET],
   ],
+  [ChainId.RINKEBY]: [RINKEBY.DAI, RINKEBY.USDT],
   [ChainId.MATIC]: [...WRAPPED_NATIVE_ONLY[ChainId.MATIC], MATIC.USDC, MATIC.WBTC, MATIC.DAI, MATIC.WETH, MATIC.USDT],
   [ChainId.FANTOM]: [...WRAPPED_NATIVE_ONLY[ChainId.FANTOM], FANTOM.DAI, FANTOM.USDC, FANTOM.WBTC, FANTOM.WETH],
   [ChainId.BSC]: [...WRAPPED_NATIVE_ONLY[ChainId.BSC], BSC.DAI, BSC.USD, BSC.USDC, BSC.USDT, BSC.BTCB, BSC.WETH],
@@ -187,7 +189,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     MOONRIVER.aROME,
   ],
   [ChainId.PALM]: [...WRAPPED_NATIVE_ONLY[ChainId.PALM], PALM.WETH, PALM.DAI],
-  [ChainId.FUSE]: [...WRAPPED_NATIVE_ONLY[ChainId.FUSE], FUSE.USDC, FUSE.USDT, FUSE.WBTC, FUSE.WETH, FUSE.DAI]
+  [ChainId.FUSE]: [...WRAPPED_NATIVE_ONLY[ChainId.FUSE], FUSE.USDC, FUSE.USDT, FUSE.WBTC, FUSE.WETH, FUSE.DAI],
 }
 
 export const ADDITIONAL_BASES: {
@@ -288,14 +290,7 @@ export const COMMON_BASES: ChainTokenList = {
     new Token(ChainId.ARBITRUM, '0x3E6648C5a70A150A88bCE65F4aD4d506Fe15d2AF', 18, 'SPELL', 'Spell Token'),
     ARBITRUM.MIM,
   ],
-  [ChainId.XDAI]: [
-    ...WRAPPED_NATIVE_ONLY[ChainId.XDAI],
-    XDAI.USDC,
-    XDAI.USDT,
-    XDAI.WBTC,
-    XDAI.WETH,
-    PHO[ChainId.XDAI],
-  ],
+  [ChainId.XDAI]: [...WRAPPED_NATIVE_ONLY[ChainId.XDAI], XDAI.USDC, XDAI.USDT, XDAI.WBTC, XDAI.WETH, PHO[ChainId.XDAI]],
   [ChainId.AVALANCHE]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.AVALANCHE],
     AVALANCHE.DAI,
@@ -415,7 +410,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     MOONRIVER.aROME,
   ],
   [ChainId.PALM]: [...WRAPPED_NATIVE_ONLY[ChainId.PALM], PALM.WETH, PALM.DAI],
-  [ChainId.FUSE]: [...WRAPPED_NATIVE_ONLY[ChainId.FUSE], FUSE.USDC, FUSE.USDT, FUSE.WBTC, FUSE.WETH, FUSE.DAI]
+  [ChainId.FUSE]: [...WRAPPED_NATIVE_ONLY[ChainId.FUSE], FUSE.USDC, FUSE.USDT, FUSE.WBTC, FUSE.WETH, FUSE.DAI],
 }
 
 export const PINNED_PAIRS: {

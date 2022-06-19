@@ -1,5 +1,10 @@
 import { ChainId, Ether, PHO_ADDRESS, Token, WETH9, WNATIVE } from 'phoswap-sdk'
 
+export const RINKEBY: { [key: string]: Token } = {
+  DAI: new Token(ChainId.RINKEBY, '0x6c9299D33a608c968eD09eb0969Be16446d8E118', 18, 'DAI', 'Dai Stablecoin'),
+  USDT: new Token(ChainId.RINKEBY, '0xB7C9061A208A03cFBa1DeDEdFE0917066603ab4e', 8, 'USDT', 'Tether USD'),
+}
+
 export const FUSE: { [key: string]: Token } = {
   WETH: new Token(ChainId.FUSE, '0xa722c13135930332Eb3d749B2F0906559D2C5b99', 18, 'WETH', 'Wrapped Ether'),
   WBTC: new Token(ChainId.FUSE, '0x33284f95ccb7B948d9D352e1439561CF83d8d00d', 8, 'WBTC', 'Wrapped Bitcoin'),
@@ -221,13 +226,7 @@ export const XPHO_CALL = new Token(
 )
 export const WBTC = new Token(ChainId.MAINNET, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 8, 'WBTC', 'Wrapped BTC')
 
-export const XPHO = new Token(
-  ChainId.RINKEBY,
-  '0x94555E53B802672029A285e5B9122aEA4C739bA2',
-  18,
-  'xPHO',
-  'PhoBar'
-)
+export const XPHO = new Token(ChainId.RINKEBY, '0x94555E53B802672029A285e5B9122aEA4C739bA2', 18, 'xPHO', 'PhoBar')
 
 export const LIFT = new Token(ChainId.MAINNET, '0xf9209d900f7ad1DC45376a2caA61c78f6dEA53B6', 18, 'LIFT', 'LiftKitchen')
 export const LFBTC = new Token(
@@ -283,7 +282,7 @@ type ChainTokenMap = {
 // PHO
 export const PHO: ChainTokenMap = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, PHO_ADDRESS[ChainId.MAINNET], 18, 'PHO', 'PhoToken'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, PHO_ADDRESS[ChainId.RINKEBY], 18, 'PHO', 'PhoToken')
+  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, PHO_ADDRESS[ChainId.RINKEBY], 18, 'PHO', 'PhoToken'),
 }
 
 export const WETH9_EXTENDED: { [chainId: number]: Token } = {
